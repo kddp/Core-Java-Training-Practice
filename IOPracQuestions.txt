@@ -1,0 +1,78 @@
+1.a)Copy a file to another file using BR, BW. Test it. 
+b) Then take source and destination as input from user by asking question.
+If the input file does not exist, show a proper error message to the user.
+If the destination file exists,append to the end of the file.
+
+2.Search for a string occurrence in a file. String, path is taken as input.
+Print the path of the file, its size, full name, creation date to the monitor as well.
+
+3.Take input from user a list of names. Provide option to search for a given string in the list. Retain only unique names. The user should be able to list the names as well [along with sorting]. The menu given to the user should appear as shown below:
+
+Enter number to select Menu option:
+ 1.Add name
+ 2.List names
+ 3.Search
+ 4.Store
+ 5.Load
+ 6.Exit
+
+On entering option 1, you can ask the user to input the name. On entering option 3, you can ask the user to enter search string.
+Store the names given 
+
+4. Print the number of occurrences of each word in a file to the console.
+5. Build a menu program to take the name and phonenum as input from the user.
+He should be able to add/edit/list/delete the same. The data should be saved to a file with format name=phoneNum per line.
+
+Ex code:
+		BufferedReader br = null; BufferedWriter bw = null;
+		int n;
+		String line;
+		try
+		{
+			// initialize res var
+			br = new BufferedReader(new FileReader(fromPath));
+			bw = new BufferedWriter(new FileWriter(toPath));
+			
+			// apply business logic
+			while((line = br.readLine())!=null)
+			{
+				System.out.println(line);
+				bw.write(line);
+				bw.newLine();
+				//bw.flush();
+						
+			}
+			
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				if(br!=null)
+					br.close();
+				if(bw!=null)
+					bw.close();
+			}
+			catch(IOException e)
+			{
+				e.printStackTrace();
+			}
+		}
+		
+Another ex:
+		File f1 = new File("/Users/vikramshastry/Desktop/");
+		System.out.println("does f1 exist ? "+f1.exists());
+		System.out.println("is file ? "+f1.isFile());
+		System.out.println("is dir ? "+f1.isDirectory());
+		System.out.println("length ? "+f1.length());
+		System.out.println("full path "+f1.getAbsolutePath());
+	
+ 

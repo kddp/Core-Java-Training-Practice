@@ -1,0 +1,37 @@
+package com.uttara.test;
+
+public class MyString
+{
+	private char[] arr;
+	private int length;
+	
+	public MyString(char [] c)
+	{
+		arr = c;
+	}
+	
+	public int size()
+	{
+		return this.arr.length;
+	}
+	
+	public boolean equals(Object o)
+	{
+		if(o instanceof MyString)
+		{
+			MyString m = (MyString)o;
+			
+			for(int i = 0;i<arr.length;i++)
+			{
+					if( this.arr[i] == m[i])
+						return true;
+					else
+						return false;
+			}
+		}
+		return false;
+	}
+
+		
+}
+	

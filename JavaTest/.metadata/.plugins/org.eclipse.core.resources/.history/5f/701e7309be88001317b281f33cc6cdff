@@ -1,0 +1,12 @@
+package com.uttara.test;
+
+public class TestMyString {
+
+	public static void main(String[] args)
+	{
+		MyString m = new MyString(a,b,c);
+		
+		System.out.println(m);
+	}
+
+}

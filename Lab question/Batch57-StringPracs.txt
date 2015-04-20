@@ -1,0 +1,63 @@
+Basic:
+StringOperations class
+1) Take an input string. Print the string with its first and last chars swapped
+2) Take an input string. Print its length, number of letters and digits in it. Also add all the chars to form a number total and print it.
+3) WAP to accept a string and return true if all chars are in sequential order, meaning if each char is <= than the next char.
+4) WAM to accept 2 strings as input. Find out how many times does 
+the second param occur in the first one (number of occurrences) and return the count.
+5) WAP to swap 2 ints/strings without using a temp variable
+6) Given a sentence as input, find out how many times each word occurs in the 
+sentence
+7) WAP to print whether an input string is a palindrome using 
+a)StringBuilder b) without SB c) using min space and time without using SB
+8) WAM to print only the unique chars in a given string
+9) WAP to print all the permutations of a string
+10) WAP to print the longest palindrome in a given input string
+
+Methods required:
+1) int len = str.length()
+2) for (int i = 0 ; i < str.length() ; i++)
+	char c = str.charAt(i);
+3) char[] arr = str.toCharArray();
+4) Character.isUpperCase(char), Character.isLowerCase(char), Character.toUpperCase(char),
+Character.toLowerCase(char), Character.isLetter(char), Character.isDigit(char)
+5) int index = str.indexOf(String s, int pos)
+6) s1.equals(s2), s1.compareTo(s2)
+
+For 1st prob:
+	I/p -> o/p
+	abcd -> dbca
+	"" -> ""
+	"       " -> ""			" abc " -> "abc"
+	"123" -> "321"
+	"a" -> "a"
+	null -> "lnul"
+
+	public static String swapFirstAndLast(String s)
+	{
+		if(s == null)
+			return "lnul";
+		if(s.length() <= 1)
+			return s;
+			
+		String s1 = s.trim();
+		if(s1.equals(""))
+			return "";
+		
+		String res = s1.charAt(s1.length() - 1) + s1.substring(1,s1.length()-1) + s1.charAt(0); 
+		return res;
+	}
+For 4th Prob:
+	"ramaramaramaramasitasita" "ra"
+	pos = 0;
+	int i = 0;
+	while(i!=-1)
+	{
+		i = s1.indexOf(s2,pos)
+		if(i!=-1)
+			pos = i + s2.length() - 1;
+		else
+			break;
+	}
+
+

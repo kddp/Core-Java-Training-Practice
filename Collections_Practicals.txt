@@ -1,0 +1,46 @@
+1> Take input from user a list of names. 
+Build a menu so that the user can add a name, search for part names, remove a name, 
+display the names and sort them 
+(support natural ordering sort and sorting based on number of letters in them). 
+
+2) Create two strings and invoke == and .equals() on them to verify working of object identity and object equality. 
+Create the strings as literals as well as using the new operator.
+
+3) There are vehicles. Vehicle has a name and an engine capacity [like 100bhp, 200bhp etc]. 
+A vehicle is equal to another if both the name and capacity are the same. 
+Override equals() method in Vehicle to implement this functionality. 
+In a tester class, create two vehicle objects, invoke equals on it and find out whether 
+object equality check is working correctly.
+
+4) Create a HashSet. Add vehicle objects to it. 
+Create a new vehicle object with an earlier created name and engine capacity. 
+Try to add this to the set. Remember this should not be allowed as it is a duplicate. 
+If it is allowing, why so? Override hashCode() method and see if the same behaviour 
+still persits.
+Put SOPs in equals() and hashCode() so you understand the control flow.
+
+5) Make the vehicle class implement Comparable and override compareTo() method to check engine capacity to decide which vehicle is greter/lesser. Test this first in a tester class and see which vehicle is greater/lesser. Then add vehicle objects to a TreeSet. Iterate over the elements and print out the vehicle names. Verify if the sorting is happening correctly.
+
+6) Take a sentence and a word as input from the user and 
+a) print how many occurrences you find of an input word in the sentence
+b) sort the sentence i) with duplicates ii) without duplicates and print
+c) sort the sentence using string length comparison
+d) remove all the occurrences of the word from the sentence
+
+7) Given a sentence as input, find the number of occurances of every word 
+in it and print it out.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
